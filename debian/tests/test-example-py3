@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+
+import pyqrcode
+import os.path
+
+qr = pyqrcode.create('Unladden swallow')
+qr.png('famous-joke.png', scale=5)
+
+if not os.path.exists("famous-joke.png"):
+    raise("missing file")
